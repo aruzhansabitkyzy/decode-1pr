@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freshio</title>
+    <script src="https://kit.fontawesome.com/ac6160e133.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
@@ -62,115 +63,190 @@
     </div>
 
     <div class="third_header container">
-        <div class="menu">
-            <div class="menu-burger">
-                <img src="../img/icons8-меню-30 (1).png" width="20px" height="20px">
-                <p>Shop by Department</p>
-                <div class="dropdown drop_menu">
-                    <ul>
-                        <li><a href="#"><img src="">Fruits & Vegetables</a></li>
-                        <li id="drop_supply">
-                            <a href="#"><img src="">Supplyments</a>
-                            <div class="sub_drop ">
-                                 <ul>
-                                    <li>Vegetables</li>
-                                    <li>Fresh Meat</li>
-                                    <li>Fruit & Nut Gifts</li>
-                                    <li>Fresh Berries</li>
-                                 </ul>
-                            </div>
-                        </li>
-                        <li><a href="#"><img src="">Dairy Bread & Eggs</a></li>
-                        <li><a href="#"><img src="">Package Foods</a></li>
-                        <li><a href="#"><img src="">Beauty & Care</a></li>
-                        <li><a href="#"><img src="">Health & Wellness</a></li>
-                        <li><a href="#"><img src="">Baby & Infants</a></li>
-                        <li><a href="#"><img src="">Home Care</a></li>
-                        <li><a href="#"><img src="">Hot Offers</a></li> 
-                    </ul>
-                </div>
+        <div class="nav-left">
+            <div id="burger-menu">
+                <img src="../img/icons8-меню-30 (1).png">
             </div>
-          
+            <div id="menu-text">
+                <h4>Shop By Department</h4>
+            </div>
+            <!-- <div class="dropdown nav-menu"> -->
+                <!-- <ul class="nav-menu-drop">
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-salad"></i>
+                            <span>Fruits & Vegetables</span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-meat"></i>
+                            <span>Supplyments</span>
+                            <span><img src=""></span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-egg-fried"></i>
+                            <span>Dairy Bread & Eggs</span>
+                            <span><img src=""></span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-pizza-slice"></i>
+                            <span>Package Foods</span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-apple-alt"></i>
+                            <span>Beauty & Care</span>
+                            <span><img src=""></span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-volleyball-ball"></i>
+                            <span>Health & Welness</span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-ice-cream"></i>
+                            <span>Baby & Infants</span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-leaf"></i>
+                            <span>Home Care</span>
+                          </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                          <span>
+                            <i class="fa-light fa-badge-percent"></i>
+                            <span>Hot Offers</span> 
+                          </span>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
         </div>
-        <div class="th_links">
-            <ul>
+        
+        <div class="nav-right">
+            <ul id="nav-ul">
                 <li id="li_home">
-                    <a href="#" id="home_link">Home
+                    <a href="#" class="menu_link">Home</a>
                     <div class="dropdown drop_home">
                             <ul>
-                                <li>Home 1</li>
-                                <li>Home 2</li>
-                                <li>Home 3</li>
-                                <li>Home 4</li>
-                                <li>Home 5</li>
-                                <li>Home 6</li>
-                                <li>Home 7</li>
-                                <li>Home 8</li>
+                                <li><a href="#">Home 1</a></li>
+                                <li><a href="#">Home 2</a></li>
+                                <li><a href="#">Home 3</a></li>
+                                <li><a href="#">Home 4</a></li>
+                                <li><a href="#">Home 5</a></li>
+                                <li><a href="#">Home 6</a></li>
+                                <li><a href="#">Home 7</a></li>
+                                <li><a href="#">Home 8</a></li>
                             </ul>
                     </div>
-                    </a>
                 </li>
                 <li id="li_shop">
-                    <a href="#" id="shop_link">Shop
-                        <div class="dropdown drop_shop">
+                    <a href="#" class="menu_link">Shop</a>
+                    <div class="dropdown drop_shop">
+                        <div class="uls">
                             <ul>
-                                <li>Categories 1</li>
-                                <li>Vegetable</li>
-                                <li>Tomato</li>
-                                <li>Cabbage</li>
-                                <li>Juice</li>
-                                <li>Meat</li>
+                                <li><a href="#" style="color: black">Categories 1</a></li>
+                                <li><a href="#">Vegetable</a></li>
+                                <li><a href="#">Tomato</a></li>
+                                <li><a href="#">Cabbage</a></li>
+                                <li><a href="#">Juice</a></li>
+                                <li><a href="#">Meat</a></li>
                             </ul>
                             <ul>
-                                <li>Categories 2</li>
-                                <li>Beef</li>
-                                <li>Pork</li>
-                                <li>Coconut</li>
-                                <li>Broccoli</li>
-                                <li>Fish</li>
+                                <li><a href="#" style="color: black">Categories 2</a></li>
+                                <li><a href="#">Beef</a></li>
+                                <li><a href="#">Pork</a></li>
+                                <li><a href="#">Coconut</a></li>
+                                <li><a href="#">Broccoli</a></li>
+                                <li><a href="#">Fish</a></li>
                             </ul>
                             <ul>
-                                <li>Categories 3</li>
-                                <li>Seafood</li>
-                                <li>Octopus</li>
-                                <li>Fish</li>
-                                <li>Pork</li>
-                                <li>More</li>
+                                <li><a href="#" style="color: black">Categories 3</a></li>
+                                <li><a href="#">Seafood</a></li>
+                                <li><a href="#">Octopus </a></li>
+                                <li><a href="#">Fish</a></li>
+                                <li><a href="#">Pork</a></li>
+                                <li><a href="#">More</a></li>
                             </ul>
                             <ul>
-                                <li>Categories 4</li>
-                                <li>Vegetables</li>
-                                <li>Fresh Meat</li>
-                                <li>Fruit & Nut Gifts</li>
-                                <li>Fresh Berries</li>
-                                <li>Fat Freezing</li>
+                                <li><a href="#" style="color: black">Categories 4</a></li>
+                                <li><a href="#">Vegetables</a></li>
+                                <li><a href="#">Fresh Meat</a></li>
+                                <li><a href="#">Fruit & Nut Gifts</a></li>
+                                <li><a href="#">Fresh Berries</a></li>
+                                <li><a href="#">Fat Freezing</a></li>
                             </ul>
-                        </div>
-                    </a>
+                         </div>
+                    </div>
                 </li>
                 <li id="li_pages">
-                    <a href="#" id="pages_link">Pages
-                        <div class="dropdown drop_pages">
+                    <a href="#" class="menu_link">Pages</a>
+                    <div class="dropdown drop_pages">
                             <ul>
-                                <li><img src='../img/8c16f9f024af16977adc1f618872eb8b.jpg'  width="100px" height="120px"></li>
-                                <li><img src='../img/8c16f9f024af16977adc1f618872eb8b.jpg' width="100px" height="120px"></li>
-                                <li><img src='../img/8c16f9f024af16977adc1f618872eb8b.jpg' width="100px" height="120px"></li>
-                                <li><img src='../img/8c16f9f024af16977adc1f618872eb8b.jpg' width="100px" height="120px"></li>
-                                <li><img src='../img/38991a8c1582669d29abe889bc0d5f52.jpg' width="100px" height="120px"></li>
-                                <li><img src='../img/c5d9025b68250832a31eac3b6d344955.jpg' width="100px" height="120px"></li>
-                                <li><img src='../img/b1a8b9381d8d3e3c4d13dfe24231581f.jpg' width="100px" height="120px"></li>
+                                <li><a href="#"><img src="../img/38991a8c1582669d29abe889bc0d5f52.jpg" width="100px" height="120px"></a></li>
+                                <li><a href="#"><img src="../img/38991a8c1582669d29abe889bc0d5f52.jpg" width="100px" height="120px"></a></li>
+                                <li><a href="#"><img src="../img/38991a8c1582669d29abe889bc0d5f52.jpg" width="100px" height="120px"></a></li>
+                                <li><a href="#"><img src="../img/38991a8c1582669d29abe889bc0d5f52.jpg" width="100px" height="120px"></a></li>
+                                <li><a href="#"><img src="../img/8c16f9f024af16977adc1f618872eb8b.jpg" width="100px" height="120px"></a></li>
+                                <li><a href="#"><img src="../img/b1a8b9381d8d3e3c4d13dfe24231581f.jpg" width="100px" height="120px"></a></li>
+                               
                             </ul>
-                        </div>
-                    </a>
+                    </div>
                 </li>
-                <li>
-                    <a href="#">Blog</a>
+                <li id="li_blog">
+                    <a href="#" class="menu_link">Blog</a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li id="li_contact">
+                    <a href="#" class="menu_link">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
+
+
+    <!-- <div class="main">
+        <div class="main_left">
+            <div class="main_img">
+                <img src="../img/VitaminA-Foods-BlogThumbnail-1080x675.jpg">
+            </div>
+            <div class="main_text">
+                <div class="f_text">
+                    Fresh And Tasty
+                </div>
+            </div>
+        </div>
+        <div class="main_right">
+
+        </div>
+    </div> -->
+
 </body>
 </html>
