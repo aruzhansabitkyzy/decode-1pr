@@ -12,7 +12,7 @@
     <div class="panel">
         <span>THEME OPTIONS</span>
      </div>
-     <!-- <div class="paneltool">
+     <div class="paneltool">
         <div class="panelcontainer">
             <h4 id="panel_title">PANEL TOOL</h4>
             <div>
@@ -77,8 +77,8 @@
                     <a href="#">Footer 3</a>
                 </div>
             </div>
-        </div> -->
-     <!-- </div> -->
+        </div>
+     </div>
     <div class="first_header">
         <div class="fh_container container">
             <div class="fh_text">
@@ -97,6 +97,7 @@
             <div id="burger-menu">
                 <img src="../img/icons8-меню-30.png">
             </div>
+         
             <div class="sh_logo">
                  <img src="../img/logo.jpg"> 
             </div>
@@ -105,12 +106,14 @@
                     <img src="../img/icons8-поиск-30 (1).png" width="16px" height="16px">
                  </div>
                  <div id="inp">
-                    <input type="text" placeholder="Enter Keyword...">
+                    <input type="text" placeholder="Enter Keyword..." id="search_input">
                  </div>
                  <div id="link_search">
                     <a href="#">Search</a>
                  </div>
-                 
+                 <div class="search_results">
+                       
+                 </div>
             </div>
             <div class="sh_icons">
                     <div class="circle green">
@@ -143,8 +146,8 @@
             <div id="menu-text">
                 <h4>Shop By Department</h4>
             </div>
-            <!-- <div class="dropdown nav-menu"> -->
-                <!-- <ul class="nav-menu-drop">
+            <div class="dropdown nav-menu">
+             <ul class="nav-menu-drop">
                     <li>
                         <a href='#'>
                           <span>
@@ -221,7 +224,7 @@
                         </a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </div>
         
         <div class="nav-right">
@@ -310,7 +313,8 @@
         <div class="main container">
             <div class="main-left">
                 <div class="main-img">
-                   <img src="../img/VitaminA-Foods-BlogThumbnail-1080x675.jpg" width="750px" height="700px">
+                    <img src="https://img.freepik.com/premium-photo/salad-with-chicken-arugula-walnuts-tomatoes-and-parmesan-gray-background_89816-15038.jpg?w=996" width="750px" height="700px">
+
                    <div class="main-text">
                         <div>
                             <p id="f_text">Fresh and Tasty</p>
@@ -832,10 +836,11 @@
             <img src="../img/icons8-user-24.png" width="16px" height="16px">
             <h5>Account</h5>
           </div>
-          <div>
-            <img src="../img/icons8-поиск-30 (1).png" width="16px" height="16px">
+          <div class="footer_search">
+            <img id="search_icon" src="../img/icons8-поиск-30 (1).png" width="16px" height="16px">
             <h5>Search</h5>
           </div>
        </div>
 </body>
+<script src="script.js"></script>
 </html>
