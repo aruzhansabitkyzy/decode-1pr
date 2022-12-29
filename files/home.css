@@ -8,26 +8,29 @@
     box-sizing: border-box;
     font-family: 'Montserrat';
 } 
-html,body
+/* added this code and commented that is below*/
+html { height: 100%; overflow:auto; }
+body { height: 100%; }
+/* html,body
 {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: visible;
-}
+} */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5){
-
+/* 
 html,
   body{
     width:100vw;
     overflow-x:hidden;
   }
-}
+} */
 a {
     text-decoration: none;
 }
@@ -127,6 +130,10 @@ i {
     padding-top: 2px;
 }
 .sh_searchbar {
+    position: relative;
+}
+
+.sh_searchbar_container {
     background-color:#f4f4f4;
     height:45px;
     width: 550px;
@@ -134,7 +141,6 @@ i {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 #search{
     margin-left: 20px;
@@ -148,6 +154,18 @@ i {
    outline: none;
    border: none;
    background-color:#f4f4f4;
+}
+.scrollTop {
+    width: 50px;
+    height: 50px;
+    background-color: #bac34e;
+    color: white;
+    border-radius: 100%;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    z-index: 30;
+    cursor: pointer
 }
 #link_search a {
     text-decoration: none;
@@ -424,13 +442,36 @@ i {
     display: inline-block;
     transform: translateX(5px);
 }
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
 @keyframes anim-1 {
     to {
         transform: translateX(0%);
         opacity: 1;
     }
 }
+.swiper-button-prev {
+    transform: translateX(-20%);
+}
 
+.arrow-swiper {
+    visibility: hidden;
+    transition: 0.5s;
+}
+.mySwiper:hover .arrow-swiper {
+    visibility:visible;
+}
+.arrow-swiper {
+    width: 50px;
+    height: 50px;
+}
+.hidden {
+    opacity: 0;
+}
 .arrow {
     display: block;
     width: 40px;
@@ -614,9 +655,10 @@ i {
     overflow: hidden;
 }
 .fp_product {
-    width: 330px;
+    max-width: 330px;
     height:472px;
     border: 1px solid rgb(201, 201, 201);
+    border-radius: 7px;
 }
 
 .fp_product_img img{
@@ -846,12 +888,16 @@ i {
     position: fixed;
     z-index: 10;
     top: 43%;
+    transition :0.5s;
+}
+.changingImg {
+    transition: opacity 0.5s;
 }
 .paneltool {
     width: 235px;
     height: 446px;
     background-color: #e6eaef;
-
+    transition :0.5s;
 }
 .panelcontainer {
     padding: 30px 15px;
@@ -941,13 +987,16 @@ i {
     overflow:auto;
     top:14%;
     left:82%;
-    transform:translateX(100%);
+    transform: translateX(100%);
 }       
 #panel_title {
     font-size: 16px;
     color: #0a472e;
     font-weight: 800;
     margin-bottom: 15px;
+}
+.swiper-block {
+    width: 20%;
 }
 .panelcontainer div:not(:last-child) {
     margin-bottom: 10px;
@@ -1013,8 +1062,14 @@ i {
     background-color: white;
     display: none;
 }
-
+.hide_icon {
+    display: none;
+}
+.slide_left {
+    transform: translateX(0%);
+}
 .search_results {
+    display: none;
     width: 550px;
     height: 250px;
     background-color: white;
@@ -1024,7 +1079,6 @@ i {
     left: 0;
     z-index: 15;
     padding: 20px;
-    display: none;
 }
 
 .result_product{
@@ -1036,15 +1090,53 @@ i {
     margin-top: 10px;
     margin-left: 10px;
 }
+.dropdown-green {
+    position: absolute;
+    top: 112%;
+    background-color: white;
+    width: inherit;
+    padding-left: 5%;
+    z-index: 10;
+    box-shadow: -2px 2px 6px 2px rgba(34, 60, 80, 0.2);
+    width: 295px;
+    height: 380px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.dropdown-green li {
+    height: 40px;
+    list-style: none;
+    font-size: 14px;
+    font-weight:550;
+    width:100%;
+    display: flex;
+    flex-grow: 1;
+    padding-top: 10px;
+}
+.dropdown-green li:not(:last-child) {
+    border-bottom: 1px solid rgba(201, 201, 201, 0.3);
 
-
+}
+.dropdown-green li p {
+    display: flex;
+    flex: 1;
+}
 
 @media (max-width: 990px) {
     .first_header {
         display: none;
     }
-    .sh_searchbar {
+    .paneltool {
+        display: none;
+    }
+    .search_results {
+        width: 98%;
+    }
+    .hide_searchbar {
         transform: translateY(-200%);
+    }
+
+    .sh_searchbar {
         background-color: white;
         height: 100px;
         position: absolute;
@@ -1052,6 +1144,13 @@ i {
         width: 100vw;
         z-index: 15;
         transition: 0.3s;
+    }
+    .sh_searchbar_container {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .hide_searchbar {
+        transform: translateY(-200%);
     }
     .circle:not(:last-child) {
         display: none;
@@ -1180,7 +1279,7 @@ i {
     }
 }
 
-@media (max-width: 1365px) {
+/* @media (max-width: 1365px) {
     .fp_product {
         max-width: 300px;
     }
@@ -1300,7 +1399,7 @@ i {
         max-width: 320px;
         height: auto;
     }
-}
+} */
 
 @media (max-width:1290px) {
     .fb_one {
